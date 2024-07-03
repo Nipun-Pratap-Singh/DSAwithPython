@@ -15,7 +15,7 @@ n = int(input())     # space = O(n)
 function(1,n)
 
 
-# print number upto N   
+# print number 1 upto N   
 def number(i,n):
     if i>n:
         return
