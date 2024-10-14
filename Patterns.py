@@ -93,8 +93,8 @@ p1(n)
 
 def p1(n):
 
-    for i in range(n):                #   *****
-        for j in range(n-1):        #    ***
+    for i in range(n,0,-1):           #   *****
+        for j in range(n-i):          #    ***
             print(" ", end="")        #     *
         for j in range(2*i-1): 
             print("*",end="")   
@@ -103,3 +103,50 @@ def p1(n):
 n = int(input())
 p1(n) 
 
+def p1(n):
+    # Upper part of the pattern
+    for i in range(n):
+        for j in range(n - i - 1):   #   *
+            print(" ", end="")       #  ***
+        for j in range(2 * i + 1):   # ******
+            print("*", end="")       #  ***
+        print()                      #   *
+
+    # Lower part of the pattern
+    for i in range(n - 2, -1, -1):
+        for j in range(n - i - 1):
+            print(" ", end="")
+        for j in range(2 * i + 1):
+            print("*", end="")
+        print()
+
+n = int(input())
+p1(n)
+
+
+
+def p1(n):
+    # Upper part of the pattern        #  *  
+    for i in range(1, n + 1):          #  **
+        print("*" * i)                 #  ***
+                                       #  ****
+    # Lower part of the pattern        #  ***
+    for i in range(n - 1, 0, -1):      #  **
+        print("*" * i)                 #  *
+
+n = int(input())
+p1(n)
+
+
+
+
+def p1(n):
+    current_num = 1
+    for i in range(1, n + 1):            #  1       
+        for j in range(i):               #  23
+            print(current_num, end="")   #  456
+            current_num += 1             #  789
+        print()
+
+n = int(input())
+p1(n)
